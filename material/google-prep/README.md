@@ -1,3 +1,5 @@
+# Google Prep - My Summary
+
 ## Data structures
 
 - lists
@@ -45,9 +47,9 @@ Types:
 
 To be able to pick the right data structure and algorithm for a specific problem
 
-Be ready to discuss complex algorithms like Dijkstra and A*.
+Be ready to discuss complex algorithms like Dijkstra and A\*.
 
-It is OK to quickly come up with a brute force solution, but that’s never going to be the answer - always look for an O(n*logn) solution or ideally a linear one
+It is OK to quickly come up with a brute force solution, but that’s never going to be the answer - always look for an O(n\*logn) solution or ideally a linear one
 
 Material:
 
@@ -75,12 +77,12 @@ Material:
 
 - Consider if a problem can be applied with graph algorithms like distance, search, connectivity, cycle-detection, etc
 - Pros and cons of each graph representation in memory:
-    - objects and pointers
-    - matrix
-    - adjacency list
+  - objects and pointers
+  - matrix
+  - adjacency list
 - You should know the basic graph traversal algorithms:
-    - breadth-first search and depth-first search.
-    - Know their computational complexity, their tradeoffs and how to implement them in real code.
+  - breadth-first search and depth-first search.
+  - Know their computational complexity, their tradeoffs and how to implement them in real code.
 
 ## **Operating Systems**
 
@@ -111,11 +113,11 @@ Sample topics include
 - robustness
 - tradeoffs.
 - internet:
-    - routers
-    - domain name servers
-    - load balancers
-    - firewalls
-    - etc.
+  - routers
+  - domain name servers
+  - load balancers
+  - firewalls
+  - etc.
 
 For information on system design, check out our [research](https://www.google.com/url?sa=D&q=http://research.google.com/pubs/DistributedSystemsandParallelComputing.html&ust=1625251740000000&usg=AOvVaw3iL_LtrYypgVHEcP9sHLDF&hl=pt-BR&source=gmail) on distributed systems and parallel computing.
 
@@ -129,7 +131,7 @@ For information on system design, check out our [research](https://www.google.co
 
 ○ Don’t be afraid of dealing with huge numbers!
 
-● Know a variety of searching and sorting algorithms (Quicksort, Mergesort, Hash Tables,etc.) - know more than one O(n*logn) sorting algorithm - how they work
+● Know a variety of searching and sorting algorithms (Quicksort, Mergesort, Hash Tables,etc.) - know more than one O(n\*logn) sorting algorithm - how they work
 
 ● System design questions are a test of your problem solving skills - ask qualifying questions - make sure you explain your thought process - explain and justify your assumptions
 
@@ -182,7 +184,7 @@ Sample topics: construct/ traverse data structures, implement system routines, d
 
 Don’t forget to check out Google Code University. Here is a selection for courses:
 
-Google hires a lot of graduates from Stanford and MIT, but you 	don’t have to attend these colleges to benefit from their courses. You can find the MIT Computer Science courses through **free** Opencourseware. Here’s just a selection:
+Google hires a lot of graduates from Stanford and MIT, but you don’t have to attend these colleges to benefit from their courses. You can find the MIT Computer Science courses through **free** Opencourseware. Here’s just a selection:
 
 ● 6.006: Introduction to Algorithms: [https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/)
 
@@ -222,13 +224,13 @@ Common follow up questions (once you have a solution):
 
 **Books**
 
-*[Cracking the Coding Interview](https://books.google.ie/books?id=nlgWywAACAAJ&dq=Cracking+the+Coding+Interview&hl=en&sa=X&ei=hUTtUfXVCoSg4gS5v4C4BQ)* Gayle Laakmann McDowell
+_[Cracking the Coding Interview](https://books.google.ie/books?id=nlgWywAACAAJ&dq=Cracking+the+Coding+Interview&hl=en&sa=X&ei=hUTtUfXVCoSg4gS5v4C4BQ)_ Gayle Laakmann McDowell
 
-*[Programming Interviews Exposed: Secrets to Landing Your Next Job](https://books.google.com.br/books/about/Programming_Interviews_Exposed.html?id=9_by-rpCSSUC&hl=en&redir_esc=y)* John Mongan, Eric Giguere, Noah Suojanen, Noah Kindler
+_[Programming Interviews Exposed: Secrets to Landing Your Next Job](https://books.google.com.br/books/about/Programming_Interviews_Exposed.html?id=9_by-rpCSSUC&hl=en&redir_esc=y)_ John Mongan, Eric Giguere, Noah Suojanen, Noah Kindler
 
-*[Programming Pearls](https://books.google.com.br/books/about/Programming_Pearls_2_E.html?id=vyhrriC6qcEC&hl=en&redir_esc=y)* Jon Bentley
+_[Programming Pearls](https://books.google.com.br/books/about/Programming_Pearls_2_E.html?id=vyhrriC6qcEC&hl=en&redir_esc=y)_ Jon Bentley
 
-*[Introduction to Algorithms](https://books.google.com.br/books/about/Introduction_to_Algorithms.html?id=VK9hPgAACAAJ&hl=en&redir_esc=y)* Thomas Cormen, Charles Leiserson, Ronald Rivest, Clifford Stein
+_[Introduction to Algorithms](https://books.google.com.br/books/about/Introduction_to_Algorithms.html?id=VK9hPgAACAAJ&hl=en&redir_esc=y)_ Thomas Cormen, Charles Leiserson, Ronald Rivest, Clifford Stein
 
 **Interview Prep**
 
