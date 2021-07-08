@@ -1,4 +1,9 @@
-# Diário
+# Diário 📃
+
+Dia 1:
+
+- Coletei e analisei o material preparatório que recebi do Google em 2019
+- Pesquisei sobre outros possíveis materiais
 
 Dia 2:
 
@@ -56,9 +61,11 @@ Dia 5
   - ✅ Vídeo Dynamic Connectivity: [https://www.coursera.org/learn/algorithms-part1/lecture/fjxHC/dynamic-connectivity](https://www.coursera.org/learn/algorithms-part1/lecture/fjxHC/dynamic-connectivity)
   - ✅ Vídeo Quick Find: [https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find](https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find)
   - ✅ Vídeo Quick Union: [https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union](https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union)
-  - ✅ Vídeo Quick-Union Improvements: [https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements](https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements)
+  - ✅ Vídeo Quick-Union Improvements: [https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements][video-quick-union-improvements]
 
     - A dificuldade aumentou bastante para mim neste vídeo. Não consegui entender tudo de primeira.
+      Não falou sobre a inicialização. Se ela se manteve igual ou não. Faltou uma visão do código
+      completo.
       As demonstrações matemáticas foram muito superficiais e ainda estou me adaptando aos conceitos
       novos
 
@@ -76,3 +83,4 @@ Dia 5
 [leetcode]: https://leetcode.com/
 [plan]: /plan.md
 [repo]: https://github.com/camilamaia/jornada-big-tech
+[video-quick-union-improvements]: https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements
