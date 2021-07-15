@@ -1,11 +1,11 @@
 # Diário 📃
 
-Dia 1:
+## Dia 1
 
 - Coletei e analisei o material preparatório que recebi do Google em 2019
 - Pesquisei sobre outros possíveis materiais
 
-Dia 2:
+## Dia 2
 
 - Peguei o livro [Cracking the Coding Interview][ctci]
 - Fiz meu registro no curso [Coursera - Algorithms, Part 1][coursera-part-1]
@@ -17,7 +17,7 @@ Dia 2:
     [Scalability & System Design for Developers][educative-io-course]
   - Todo o processo normalmente traz muito estresse e pode abalar bastante sua saúde mental
 
-Dia 3:
+## Dia 3
 
 - Paguei o [leetcode][leetcode] premium
 - Defini meu [plano de estudo][plan]
@@ -40,7 +40,7 @@ Dia 3:
   - [https://twitter.com/vquaiato/status/1216836456158834694](https://twitter.com/vquaiato/status/1216836456158834694)
   - [https://twitter.com/vquaiato/status/1153074713234681857](https://twitter.com/vquaiato/status/1153074713234681857)
 
-Dia 4
+## Dia 4
 
 - [Algorithms, Part 1][coursera-part-1] Course Introduction
   - ✅ Exercício HelloWorld: [https://www.coursera.org/learn/algorithms-part1/programming/37IH3/hello-world](https://www.coursera.org/learn/algorithms-part1/programming/37IH3/hello-world)
@@ -52,7 +52,7 @@ Dia 4
 - Li o [Google Java Style Guide][google-java-style-guide]
   - Nem tudo a IDE consegue cobrir. A leitura na íntegra foi importante.
 
-Dia 5
+## Dia 5
 
 - [Algorithms, Part 1][coursera-part-1] Union Find
 
@@ -75,12 +75,52 @@ Dia 5
   "Space Complexity"
 - Estava exausta, ainda tentando processar o quê vi no curso
 
+## Dia 6
+
+- Organizei e trouxe as minhas notas do diário e de planejamento para o
+  [repositório do GitHub][repo]
+- Lendo e estudando novamente a aula [Quick-Union Improvements][video-quick-union-improvements]
+- Não ter entendido a aula no dia anterior me deu grande desmotivação. Hoje foi muito difícil
+  voltar a render
+
+## Dia 7
+
+- Continuei tentando entender a aula anterior.
+- Encontrei duas coisas que me ajudaram muito:
+  - [Erratas][coursera-errata]
+  - [Livro do curso][algorithms-book]
+
+## Dia 8
+
+- Arrumei o IntelliJ com fontes maiores (acessibilidade)
+  - https://plugins.jetbrains.com/plugin/9541-hidpi-profiles
+- Comecei o [Percolation Assignment][percolation-assignment]
+
+## Dia 9
+
+- Continuei com o [Percolation Assignment][percolation-assignment]
+- Busquei soluções na internet para tomar como base, referência:
+  - https://github.com/oak2278/percolation
+  - https://github.com/jamesmacfie/percolation
+
+## Dia 10
+
+- Terminei de resolver o [Percolation Assignment][percolation-assignment].
+- Submeti: nota 90/100
+
+## Dia 11:
+
+- Arrumei detalhes para conseguir nota 100/100 no [Percolation Assignment][percolation-assignment]
+
+[algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
+[coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
 [ctci]: https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en
 [educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
 [leetcode]: https://leetcode.com/
+[percolation-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php
 [plan]: /plan.md
 [repo]: https://github.com/camilamaia/jornada-big-tech
 [video-quick-union-improvements]: https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements
