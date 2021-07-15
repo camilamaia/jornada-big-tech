@@ -88,3 +88,92 @@ Quick-union defect.
 - Find too expensive (could be N array accesses).
 
 #### Quick-Union Improvements
+
+Improvement 1: weighting
+
+Weighted quick-union.
+
+- Modify quick-union to avoid **tall trees**.
+- Keep track of size of each tree (number of objects).
+- Balance by linking root of smaller tree to root of larger tree.
+
+Data structure:
+
+- Integer array id[] of length N.
+- Integer array sz[] of length N to count number of objects in the tree rooted
+  at i
+
+Methods:
+
+- init: same as quick-union, but creating the extra array sz[] and set sz of each object to 1.
+- root (private): same as quick-union
+- connected: identical to quick-union. return root(p) == root(q);
+- union: Modify quick-union to:
+  - Link root of smaller tree to root of larger tree.
+  - Update the sz[] array.
+
+Running time
+
+- Find: takes time proportional to depth of p and q.
+- Union: takes constant time, given roots.
+
+**Proposition: Depth of any node x is at most lg N.**
+
+| algorithm   | initialize | union  | find |
+| ----------- | ---------- | ------ | ---- |
+| quick-find  | N          | N      | 1    |
+| quick-union | N          | N †    | N    |
+| weighted QU | N          | lg N † | lg N |
+
+† includes cost of finding roots
+
+Improvement 2: path compression
+
+Simpler one-pass variant: Make every other node in path point to its
+grandparent (thereby halving path length).
+
+In practice. No reason not to! Keeps tree almost completely flat.
+
+Proposition. [Hopcroft-Ulman, Tarjan]:
+
+Starting from an empty data structure, any sequence of M union-find ops on N objects
+makes ≤ c ( N + M lg\* N ) array accesses.
+
+- Analysis can be improved to N + M α(M, N).
+- Simple algorithm with fascinating mathematics
+
+Linear-time algorithm for M union-find ops on N objects?
+
+- Cost within constant factor of reading in the data.
+- In theory, WQUPC is not quite linear.
+- In practice, WQUPC is linear.
+
+Bottom line: Weighted quick union (with path compression) makes it
+possible to solve problems that could not otherwise be addressed.
+
+| algorithm                      | worst-case time |
+| ------------------------------ | --------------- |
+| quick-find                     | M N             |
+| quick-union                    | M N             |
+| weighted QU                    | N + M log N     |
+| QU + path compression          | N + M log N     |
+| weighted QU + path compression | N + M lg\* N    |
+
+\* M union-find operations on a set of N objects
+
+Ex. [10^9 unions and finds with 10^9 objects]
+・WQUPC reduces time from 30 years to 6 seconds.
+・Supercomputer won't help much; good algorithm enables solution.
+
+### Percolation Assignment
+
+- We model a percolation system using an n-by-n grid of sites
+- Each site is either open or blocked
+- A full site:
+  - open site
+  - can be connected to an open site in the top row via a chain of
+    neighboring (left, right, up, down) open sites.
+- We say the system percolates if:
+  - There is a full site in the bottom row
+  - In other words, a system percolates if we fill all open sites connected to the top row and that
+    process fills some open site on the bottom row
