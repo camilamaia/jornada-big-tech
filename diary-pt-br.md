@@ -32,23 +32,24 @@
     - Importância de experiência, projetos pessoais, saber várias linguagens...
 - Comecei o curso [Algorithms, Part 1][coursera-part-1]. Course Introduction
   - Comecei o curso para tentar espantar o sono.
-  - ✅ Welcome: [https://www.coursera.org/learn/algorithms-part1/supplement/icGHT/welcome-to-algorithms-part-i](https://www.coursera.org/learn/algorithms-part1/supplement/icGHT/welcome-to-algorithms-part-i)
-  - ✅ Baixei os slides: [https://www.coursera.org/learn/algorithms-part1/supplement/JgDHB/lecture-slides](https://www.coursera.org/learn/algorithms-part1/supplement/JgDHB/lecture-slides)
-  - ✅ Vídeo Course Introduction: [https://www.coursera.org/learn/algorithms-part1/lecture/buZPh/course-introduction](https://www.coursera.org/learn/algorithms-part1/lecture/buZPh/course-introduction)
+  - ✅ Welcome: https://www.coursera.org/learn/algorithms-part1/supplement/icGHT/welcome-to-algorithms-part-i
+  - ✅ Baixei os slides: https://www.coursera.org/learn/algorithms-part1/supplement/JgDHB/lecture-slides
+  - ✅ Vídeo Course Introduction:
+    https://www.coursera.org/learn/algorithms-part1/lecture/buZPh/course-introduction
 - Baixei [IntelliJ][intellij]
 - Li no Twitter
-  - [https://twitter.com/vquaiato/status/1216836456158834694](https://twitter.com/vquaiato/status/1216836456158834694)
-  - [https://twitter.com/vquaiato/status/1153074713234681857](https://twitter.com/vquaiato/status/1153074713234681857)
+  - https://twitter.com/vquaiato/status/1216836456158834694
+  - https://twitter.com/vquaiato/status/1153074713234681857
 
 ## Dia 4
 
 - [Algorithms, Part 1][coursera-part-1] Course Introduction
-  - ✅ Exercício HelloWorld: [https://www.coursera.org/learn/algorithms-part1/programming/37IH3/hello-world](https://www.coursera.org/learn/algorithms-part1/programming/37IH3/hello-world)
+  - ✅ Exercício HelloWorld: https://www.coursera.org/learn/algorithms-part1/programming/37IH3/hello-world
 - Li o capítulo "Behavioral Questions" do [CtCi][ctci] , enquanto configurava o setup do
   exercício do HelloWorld
 - Fiz o setup do google java style guide no [IntelliJ][intellij]
-  - [https://gerrit.cloudera.org/Documentation/dev-intellij.html#\_google_java_format_plugin](https://gerrit.cloudera.org/Documentation/dev-intellij.html#_google_java_format_plugin)
-  - [https://plugins.jetbrains.com/plugin/7642-save-actions](https://plugins.jetbrains.com/plugin/7642-save-actions)
+  - https://gerrit.cloudera.org/Documentation/dev-intellij.html#\_google_java_format_plugin
+  - https://plugins.jetbrains.com/plugin/7642-save-actions
 - Li o [Google Java Style Guide][google-java-style-guide]
   - Nem tudo a IDE consegue cobrir. A leitura na íntegra foi importante.
 
@@ -56,11 +57,11 @@
 
 - [Algorithms, Part 1][coursera-part-1] Union Find
 
-  - ✅ Overview: [https://www.coursera.org/learn/algorithms-part1/supplement/aYr6R/overview](https://www.coursera.org/learn/algorithms-part1/supplement/aYr6R/overview)
-  - ✅ Baixei os slides: [https://www.coursera.org/learn/algorithms-part1/supplement/bcelg/lecture-slides](https://www.coursera.org/learn/algorithms-part1/supplement/bcelg/lecture-slides)
-  - ✅ Vídeo Dynamic Connectivity: [https://www.coursera.org/learn/algorithms-part1/lecture/fjxHC/dynamic-connectivity](https://www.coursera.org/learn/algorithms-part1/lecture/fjxHC/dynamic-connectivity)
-  - ✅ Vídeo Quick Find: [https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find](https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find)
-  - ✅ Vídeo Quick Union: [https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union](https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union)
+  - ✅ Overview: https://www.coursera.org/learn/algorithms-part1/supplement/aYr6R/overview
+  - ✅ Baixei os slides: https://www.coursera.org/learn/algorithms-part1/supplement/bcelg/lecture-slides
+  - ✅ Vídeo Dynamic Connectivity: https://www.coursera.org/learn/algorithms-part1/lecture/fjxHC/dynamic-connectivity
+  - ✅ Vídeo Quick Find: https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find
+  - ✅ Vídeo Quick Union:[https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union
   - ✅ Vídeo Quick-Union Improvements: [https://www.coursera.org/learn/algorithms-part1/lecture/RZW72/quick-union-improvements][video-quick-union-improvements]
 
     - A dificuldade aumentou bastante para mim neste vídeo. Não consegui entender tudo de primeira.
@@ -69,7 +70,7 @@
       As demonstrações matemáticas foram muito superficiais e ainda estou me adaptando aos conceitos
       novos
 
-  - ✅ Vídeo Union−Find Applications: [https://www.coursera.org/learn/algorithms-part1/lecture/OLXM8/union-find-applications](https://www.coursera.org/learn/algorithms-part1/lecture/OLXM8/union-find-applications)
+  - ✅ Vídeo Union−Find Applications: https://www.coursera.org/learn/algorithms-part1/lecture/OLXM8/union-find-applications
 
 - Comecei o ler o capítulo IV "BigO" do [CtCi][ctci]. Parei antes de começar a seção
   "Space Complexity"
@@ -124,6 +125,9 @@
 ## Dia 14:
 
 - Terminei o exercício [Odd Even Jump][leetcode-odd-even-jump]
+- ✅ Baixei os Slides: https://www.coursera.org/learn/algorithms-part1/supplement/mpK20/lecture-slides
+- ✅ Vídeo Analysis of Algorithms Introduction:
+  https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction
 
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
