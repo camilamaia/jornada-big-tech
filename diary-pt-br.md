@@ -111,6 +111,19 @@
 ## Dia 11:
 
 - Arrumei detalhes para conseguir nota 100/100 no [Percolation Assignment][percolation-assignment]
+- Resolvi o exercício [Unique Email Addresses][leetcode-unique-email-addresses]
+
+## Dia 12:
+
+- Descanso
+
+## Dia 13:
+
+- Comecei o exercício [Odd Even Jump][leetcode-odd-even-jump]
+
+## Dia 14:
+
+- Terminei o exercício [Odd Even Jump][leetcode-odd-even-jump]
 
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
@@ -119,6 +132,8 @@
 [educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
+[leetcode-odd-even-jump]: https://leetcode.com/problems/odd-even-jump/
+[leetcode-unique-email-addresses]: https://leetcode.com/problems/unique-email-addresses/
 [leetcode]: https://leetcode.com/
 [percolation-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php
 [plan]: /plan.md
