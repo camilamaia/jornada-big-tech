@@ -129,6 +129,17 @@
 - ✅ Vídeo Analysis of Algorithms Introduction:
   https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction
 
+## Dia 15:
+
+- ✅ Vídeo Observations: https://www.coursera.org/learn/algorithms-part1/lecture/jmkCT/observations
+- Li um pouco do capítulo IV "BigO" do [CtCi][ctci]. Parei antes de começar a seção
+  "Multi-Part Algorithms: Add vs. Multiply"
+
+## Dia 16:
+
+- Li um pouco do capítulo IV "BigO" do [CtCi][ctci]. Parei antes de começar o exemplo 8, página 49
+- Resolvi o exercício [License Key Formatting][leetcode-license-key-formatting]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
@@ -138,6 +149,7 @@
 [intellij]: https://www.jetbrains.com/pt-br/idea/
 [leetcode-odd-even-jump]: https://leetcode.com/problems/odd-even-jump/
 [leetcode-unique-email-addresses]: https://leetcode.com/problems/unique-email-addresses/
+[leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
 [leetcode]: https://leetcode.com/
 [percolation-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php
 [plan]: /plan.md
