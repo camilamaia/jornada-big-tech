@@ -46,3 +46,12 @@ Ex:
 ```java
 String joinString1=String.join("-","welcome","to","javatpoint");
 ```
+
+## Set
+
+https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077
+
+## Types of algorithms
+
+- dynamic programming
+- sliding window algorithm

@@ -1,5 +1,5 @@
 /** Problem: https://leetcode.com/explore/interview/card/google/67/sql-2/3045/ */
-class Solutionx {
+class Solution {
 
   public int oddEvenJumps(int[] arr) {
     int totalGoodIndexes = 0;

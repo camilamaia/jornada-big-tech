@@ -109,47 +109,73 @@
 - Terminei de resolver o [Percolation Assignment][percolation-assignment].
 - Submeti: nota 90/100
 
-## Dia 11:
+## Dia 11
 
 - Arrumei detalhes para conseguir nota 100/100 no [Percolation Assignment][percolation-assignment]
 - Resolvi o exercício [Unique Email Addresses][leetcode-unique-email-addresses]
 
-## Dia 12:
+## Dia 12 (16/07)
 
 - Descanso
 
-## Dia 13:
+## Dia 13
 
 - Comecei o exercício [Odd Even Jump][leetcode-odd-even-jump]
 
-## Dia 14:
+## Dia 14
 
 - Terminei o exercício [Odd Even Jump][leetcode-odd-even-jump]
 - ✅ Baixei os Slides: https://www.coursera.org/learn/algorithms-part1/supplement/mpK20/lecture-slides
 - ✅ Vídeo Analysis of Algorithms Introduction:
   https://www.coursera.org/learn/algorithms-part1/lecture/xaxyP/analysis-of-algorithms-introduction
 
-## Dia 15:
+## Dia 15
 
 - ✅ Vídeo Observations: https://www.coursera.org/learn/algorithms-part1/lecture/jmkCT/observations
 - Li um pouco do capítulo IV "BigO" do [CtCi][ctci]. Parei antes de começar a seção
   "Multi-Part Algorithms: Add vs. Multiply"
 
-## Dia 16:
+## Dia 16
 
 - Li um pouco do capítulo IV "BigO" do [CtCi][ctci]. Parei antes de começar o exemplo 8, página 49
 - Resolvi o exercício [License Key Formatting][leetcode-license-key-formatting]
 
+## Dia 17 (23/07)
+
+- Não trabalhei na jornada big tech. Dedicação à projetos open-source
+
+## Dia 18
+
+- Assisti e estudei o vídeo
+  [Why Is Merge Sort O(n \* log(n))? The Really Really Long Answer][back-to-back-swe-merge-sort].
+  O exemplo 8 do capítulo IV "BigO" do [CtCi][ctci] citou esse bigO e precisei parar para entender.
+
+## Dia 19
+
+- Não trabalhei na jornada big tech. Dedicação à projetos open-source
+
+## Dia 20
+
+- Resolvi os exemplos 8, 9 10 e 11 do capítulo IV "BigO" do [CtCi][ctci]
+- Submeti o exercício [Fruit Into Baskets][leetcode-fruit-into-baskets], mas não foi aceito. Falhou
+  para um test case
+
+## Dia 21
+
+- Finalizei o exercício [Fruit Into Baskets][leetcode-fruit-into-baskets]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
+[back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
 [ctci]: https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en
 [educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
+[leetcode-fruit-into-baskets]: https://leetcode.com/explore/interview/card/google/67/sql-2/3046/
+[leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
 [leetcode-odd-even-jump]: https://leetcode.com/problems/odd-even-jump/
 [leetcode-unique-email-addresses]: https://leetcode.com/problems/unique-email-addresses/
-[leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
 [leetcode]: https://leetcode.com/
 [percolation-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php
 [plan]: /plan.md
