@@ -177,3 +177,110 @@ Ex. [10^9 unions and finds with 10^9 objects]
   - There is a full site in the bottom row
   - In other words, a system percolates if we fill all open sites connected to the top row and that
     process fills some open site on the bottom row
+
+## 1.4 ANALYSIS OF ALGORITHMS
+
+### Cost of basic operations
+
+<p>
+  <img
+    src="images/image1.png"
+    width="500"
+    alt="Cost of basic operations"
+  >
+</p>
+
+<p>
+  <img
+    src="images/image2.png"
+    width="500"
+    alt="Cost of basic operations"
+  >
+</p>
+
+<p>
+  <img
+    src="images/image3.png"
+    width="500"
+    alt="Cost of basic operations"
+  >
+</p>
+
+<p>
+  <img
+    src="images/image4.png"
+    width="500"
+    alt="Cost of basic operations"
+  >
+</p>
+
+### Common order-of-growth classifications
+
+<p>
+  <img
+    src="images/image5.png"
+    width="500"
+    alt="Common order-of-growth classifications"
+  >
+</p>
+
+### Binary search: Java implementation
+
+<p>
+  <img
+    src="images/image6.png"
+    width="500"
+    alt="Binary search: Java implementation"
+  >
+</p>
+
+### Commonly-used notations
+
+<p>
+  <img
+    src="images/image7.png"
+    width="500"
+    alt="Commonly-used notations"
+  >
+</p>
+
+### Typical memory usage for primitive types and arrays
+
+<p>
+  <img
+    src="images/image8.png"
+    width="500"
+    alt="Typical memory usage for primitive types and arrays"
+  >
+</p>
+
+### Typical memory usage for objects in Java
+
+<p>
+  <img
+    src="images/image9.png"
+    width="500"
+    alt="Typical memory usage for objects in Java"
+  >
+</p>
+
+<p>
+  <img
+    src="images/image10.png"
+    width="500"
+    alt="Typical memory usage for objects in Java"
+  >
+</p>
+
+Total memory usage for a data type value:
+
+- Primitive type: 4 bytes for int, 8 bytes for double, ...
+- Object reference: 8 bytes.
+- Array: 24 bytes + memory for each array entry.
+- Object: 16 bytes + memory for each instance variable
+  \+ 8 bytes if inner class (for pointer to enclosing class).
+- Padding: round up to multiple of 8 bytes.
+
+Shallow memory usage: Don't count referenced objects.
+
+Deep memory usage: If array entry or instance variable is a reference, add memory (recursively) for referenced object.

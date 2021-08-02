@@ -164,6 +164,15 @@
 
 - Finalizei o exercício [Fruit Into Baskets][leetcode-fruit-into-baskets]
 
+## Dia 22 (30/7)
+
+- Não trabalhei na jornada big tech. Dedicação à projetos open-source
+
+## Dia 23
+
+- Assisti o 4 últimos vídeos da semana 1 do [Algorithms, Part 1][coursera-part-1]
+- Comecei o exemplo 12 do capítulo IV "BigO" do [CtCi][ctci]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
