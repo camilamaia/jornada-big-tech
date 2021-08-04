@@ -173,6 +173,20 @@
 - Assisti o 4 últimos vídeos da semana 1 do [Algorithms, Part 1][coursera-part-1]
 - Comecei o exemplo 12 do capítulo IV "BigO" do [CtCi][ctci]
 
+## Dia 24
+
+- Não estudei. Projetos Open Source e preparação para a live de 1 mês. Setup da Twitch,
+  StreamLabs...
+
+## Dia 25
+
+- ✅ Li: https://www.coursera.org/learn/algorithms-part1/supplement/vQISE/overview
+- ✅ Baixei os Slides: https://www.coursera.org/learn/algorithms-part1/supplement/UAJbP/lecture-slides
+- ✅ Vídeo Stacks: https://www.coursera.org/learn/algorithms-part1/lecture/jSxyD/stacks
+- ✅ Vídeo Resizing Arrays: https://www.coursera.org/learn/algorithms-part1/lecture/WTFO7/resizing-arrays
+- ✅ Vídeo Queues: https://www.coursera.org/learn/algorithms-part1/lecture/5vgrm/queues
+- ✅ Vídeo Generics: https://www.coursera.org/learn/algorithms-part1/lecture/0URQC/generics
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
