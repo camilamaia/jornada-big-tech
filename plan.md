@@ -20,6 +20,8 @@
 
 - Prepare CV
 - Read again the first 5 chapters of [Cracking the Coding Interview Book][ctci]
+- Rehearsal
+- Study: [Technology glossary][technology-glossary]
 
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
 [coursera-part-2]: https://www.coursera.org/learn/algorithms-part2
@@ -28,3 +30,4 @@
 [gainlo]: http://www.gainlo.co/#!/
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [leetcode]: https://leetcode.com/
+[technology-glossary]: https://www.evernote.com/shard/s330/sh/3edb0de4-c5e0-465e-a028-a875f314dd10/f8cc0fa70f098d68d705673ab58e5766
