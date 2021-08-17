@@ -1,7 +1,7 @@
 /* *****************************************************************************
- *  Name:
- *  Date:
- *  Description:
+ *  Name: Camila Maia
+ *  Date: Aug 17th 2021
+ *  Description: https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php
  **************************************************************************** */
 
 import java.util.Iterator;
@@ -12,12 +12,18 @@ public class Deque<Item> implements Iterable<Item> {
     private Node last = null;
     private int size = 0;
 
+    /**
+     * Representation of a Node in a linked list
+     */
     private class Node {
         Item item;
         Node next;
         Node previous;
     }
 
+    /**
+     * Represents a deque iterator, that iterates from front to back
+     */
     private class DequeIterator implements Iterator<Item> {
         private Node current = first;
 
@@ -41,19 +47,22 @@ public class Deque<Item> implements Iterable<Item> {
     /**
      * Is the deque empty?
      *
-     * @return
+     * @return true if deque is empty, false otherwise
      */
     public boolean isEmpty() {
         return first == null;
     }
 
-    // return the number of items on the deque
+
+    /**
+     * @return the number of items on the deque
+     */
     public int size() {
         return size;
     }
 
     /**
-     * add the item to the front
+     * Adds the item to the front of the deque
      */
     public void addFirst(Item item) {
         if (item == null) throw new IllegalArgumentException("item must not be null");
@@ -73,7 +82,7 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * add the item to the back
+     * Adds the item to the back of the deque
      */
     public void addLast(Item item) {
         if (item == null) throw new IllegalArgumentException("item must not be null");
@@ -86,18 +95,16 @@ public class Deque<Item> implements Iterable<Item> {
             last = new Node();
             last.item = item;
             last.previous = secondLast;
-            if (secondLast != null) {
-                secondLast.next = last;
-            }
+            secondLast.next = last;
             size++;
         }
 
     }
 
     /**
-     * Remove and return the item from the front
+     * Removes and returns the item from the front
      *
-     * @return
+     * @return the first item
      */
     public Item removeFirst() {
         if (isEmpty()) throw new NoSuchElementException("Deque is empty");
@@ -116,9 +123,9 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * remove and return the item from the back
+     * Removes and returns the item from the back
      *
-     * @return
+     * @return the last item
      */
     public Item removeLast() {
         if (isEmpty()) throw new NoSuchElementException("Deque is empty");
@@ -137,7 +144,7 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * return an iterator over items in order from front to back
+     * @return an iterator over items in order from front to back
      */
     public Iterator<Item> iterator() {
         return new DequeIterator();
@@ -149,45 +156,113 @@ public class Deque<Item> implements Iterable<Item> {
      * @param args
      */
     public static void main(String[] args) {
+        Deque<String> d1 = new Deque<String>();
+        System.out.println(d1.isEmpty());
+        System.out.println(d1.size());
+        d1.addFirst("hi");
+        d1.addLast("hello");
+        d1.addLast("world");
+        d1.addLast("hey");
+
+        d1.removeFirst();
+        d1.removeLast();
+
+        for (String item : d1) {
+            System.out.println(item);
+        }
+
+        runTests();
+    }
+
+    private static void runTests() {
+        testEmpty();
+        testAddFirstRemoveFirst();
+        testAddFirstRemoveLast();
+        testAddLastRemoveFirst();
+        testAddLastRemoveLast();
+        test();
+    }
+
+    private static void testEmpty() {
+        System.out.println("testAddFirstRemoveFirst");
         System.out.println("Deque<String> d1 = new Deque<String>();");
         Deque<String> d1 = new Deque<String>();
-        System.out.println(
-                "d1.iterator().hasNext() -> " + d1.iterator().hasNext() + " - false");
+        compare("d1.iterator().hasNext()", d1.iterator().hasNext(), false);
         // System.out.println(
         //         d1.iterator().next()); // NoSuchElementException: There are no more items to return
         // d1.iterator().remove(); // UnsupportedOperationException
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - true");
-        System.out.println("d1.size() -> " + d1.size() + " - 0");
+        compare("d1.isEmpty()", d1.isEmpty(), true);
+        compare("d1.size()", d1.size(), 0);
         // d1.removeFirst(); // NoSuchElementException: Deque is empty
         // d1.removeLast(); // NoSuchElementException: Deque is empty
+    }
 
-        System.out.println();
+    private static void testAddFirstRemoveFirst() {
+        System.out.println("\ntestAddFirstRemoveFirst");
+        System.out.println("Deque<String> d1 = new Deque<String>();");
+        Deque<String> d1 = new Deque<String>();
         System.out.println("d1.addFirst(\"oi\");");
         d1.addFirst("oi");
-        System.out.println(
-                "d1.iterator().hasNext() -> " + d1.iterator().hasNext() + " - true");
-        System.out.println("d1.iterator().next() -> " + d1.iterator().next() + " - oi");
+        compare("d1.iterator().hasNext()", d1.iterator().hasNext(), true);
+        compare("d1.iterator().next()", d1.iterator().next(), "oi");
         // d1.iterator().remove(); // UnsupportedOperationException
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - false");
-        System.out.println("d1.size() -> " + d1.size() + " - 1");
-        System.out.println("d1.removeFirst() -> " + d1.removeFirst() + " - oi");
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - true");
-        System.out.println("d1.size() -> " + d1.size() + " - 0");
+        compare("d1.isEmpty()", d1.isEmpty(), false);
+        compare("d1.size()", d1.size(), 1);
+        compare("d1.removeFirst()", d1.removeFirst(), "oi");
+        compare("d1.isEmpty()", d1.isEmpty(), true);
+    }
 
-        System.out.println();
+    private static void testAddFirstRemoveLast() {
+        System.out.println("\ntestAddFirstRemoveLast");
+        System.out.println("Deque<String> d1 = new Deque<String>();");
+        Deque<String> d1 = new Deque<String>();
         System.out.println("d1.addFirst(\"tchau\");");
         d1.addFirst("tchau");
-        System.out.println(
-                "d1.iterator().hasNext() -> " + d1.iterator().hasNext() + " - true");
-        System.out.println("d1.iterator().next() -> " + d1.iterator().next() + " - tchau");
+        compare("d1.iterator().hasNext()", d1.iterator().hasNext(), true);
+        compare("d1.iterator().next()", d1.iterator().next(), "tchau");
         // d1.iterator().remove(); // UnsupportedOperationException
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - false");
-        System.out.println("d1.size() -> " + d1.size() + " - 1");
-        System.out.println("d1.removeLast() -> " + d1.removeLast() + " - tchau");
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - true");
-        System.out.println("d1.size() -> " + d1.size() + " - 0");
+        compare("d1.isEmpty()", d1.isEmpty(), false);
+        compare("d1.size()", d1.size(), 1);
+        compare("d1.removeLast()", d1.removeLast(), "tchau");
+        compare("d1.size()", d1.size(), 0);
+    }
 
-        System.out.println();
+    private static void testAddLastRemoveFirst() {
+        System.out.println("\ntestAddLastRemoveFirst");
+        System.out.println("Deque<String> d1 = new Deque<String>();");
+        Deque<String> d1 = new Deque<String>();
+        System.out.println("d1.addLast(\"opa\");");
+        d1.addLast("opa");
+        compare("d1.iterator().hasNext()", d1.iterator().hasNext(), true);
+        compare("d1.iterator().next()", d1.iterator().next(), "opa");
+        // d1.iterator().remove(); // UnsupportedOperationException
+        compare("d1.isEmpty()", d1.isEmpty(), false);
+        compare("d1.size()", d1.size(), 1);
+        compare("d1.removeFirst()", d1.removeFirst(), "opa");
+        compare("d1.isEmpty()", d1.isEmpty(), true);
+        compare("d1.size()", d1.size(), 0);
+    }
+
+    private static void testAddLastRemoveLast() {
+        System.out.println("\ntestAddLastRemoveLast");
+        System.out.println("Deque<String> d1 = new Deque<String>();");
+        Deque<String> d1 = new Deque<String>();
+        System.out.println("d1.addLast(\"salve\");");
+        d1.addLast("salve");
+        compare("d1.iterator().hasNext()", d1.iterator().hasNext(), true);
+        compare("d1.iterator().next()", d1.iterator().next(), "salve");
+        // d1.iterator().remove(); // UnsupportedOperationException
+        compare("d1.isEmpty()", d1.isEmpty(), false);
+        compare("d1.size()", d1.size(), 1);
+        compare("d1.removeLast()", d1.removeLast(), "salve");
+        compare("d1.isEmpty()", d1.isEmpty(), true);
+        compare("d1.size()", d1.size(), 0);
+    }
+
+    private static void test() {
+        System.out.println("\ntest");
+        System.out.println("Deque<String> d1 = new Deque<String>();");
+        Deque<String> d1 = new Deque<String>();
         System.out.println("d1.addLast(\"wazup\");");
         d1.addLast("wazup");
         System.out.println(
@@ -232,12 +307,20 @@ public class Deque<Item> implements Iterable<Item> {
         System.out.println("wazup");
         System.out.println("hein?");
 
-        System.out.println("d1.isEmpty() -> " + d1.isEmpty() + " - false");
-        System.out.println("d1.size() -> " + d1.size() + " - 3");
-        System.out.println("d1.removeLast() -> " + d1.removeLast() + " - hein?");
-        System.out.println("d1.removeLast() -> " + d1.removeLast() + " - wazup");
-        System.out.println("d1.removeLast() -> " + d1.removeLast() + " - Hey!");
+        compare("d1.isEmpty()", d1.isEmpty(), false);
+        compare("d1.size()", d1.size(), 3);
+        compare("d1.removeLast()", d1.removeLast(), "hein?");
+        compare("d1.removeLast()", d1.removeLast(), "wazup");
+        compare("d1.removeLast()", d1.removeLast(), "Hey!");
         // d1.removeFirst(); // NoSuchElementException: Deque is empty
         // d1.removeLast(); // NoSuchElementException: Deque is empty
+    }
+
+    private static void compare(String command, Object result, Object expected) {
+        System.out.println(command + " -> " + result + " - " + expected);
+        String errorMessage =
+                "ERROR!!! Result and expected dont match." +
+                        " Result: " + result + " Expected: " + expected;
+        if (result != expected) System.out.println(errorMessage);
     }
 }

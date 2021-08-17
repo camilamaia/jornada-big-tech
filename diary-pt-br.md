@@ -221,6 +221,14 @@
 - ✅ Vídeo Stack and Queue Applications: https://www.coursera.org/learn/algorithms-part1/lecture/2Mbvz/stack-and-queue-applications-optional
 - Comecei o [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
 
+## Dia 34 (17/8)
+
+- Continuando o [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
+
+## Dia 35 (18/8)
+
+- Continuando o [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
