@@ -227,7 +227,11 @@
 
 ## Dia 35 (18/8)
 
-- Continuando o [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
+- Submeti o exercício [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
+
+## Dia 36 (19/8)
+
+- Corrigi o quê precisava para conseguir nota 100/100 no exercício [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
 
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U

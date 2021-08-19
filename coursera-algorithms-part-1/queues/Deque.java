@@ -111,6 +111,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (first.next == null) {
             Item firstItem = first.item;
             first = null;
+            last = null;
             size--;
             return firstItem;
         }
@@ -156,21 +157,6 @@ public class Deque<Item> implements Iterable<Item> {
      * @param args
      */
     public static void main(String[] args) {
-        Deque<String> d1 = new Deque<String>();
-        System.out.println(d1.isEmpty());
-        System.out.println(d1.size());
-        d1.addFirst("hi");
-        d1.addLast("hello");
-        d1.addLast("world");
-        d1.addLast("hey");
-
-        d1.removeFirst();
-        d1.removeLast();
-
-        for (String item : d1) {
-            System.out.println(item);
-        }
-
         runTests();
     }
 
@@ -181,6 +167,9 @@ public class Deque<Item> implements Iterable<Item> {
         testAddLastRemoveFirst();
         testAddLastRemoveLast();
         test();
+        testCourseraCase1();
+        testCourseraCase2();
+        testCourseraCase3();
     }
 
     private static void testEmpty() {
@@ -314,6 +303,36 @@ public class Deque<Item> implements Iterable<Item> {
         compare("d1.removeLast()", d1.removeLast(), "Hey!");
         // d1.removeFirst(); // NoSuchElementException: Deque is empty
         // d1.removeLast(); // NoSuchElementException: Deque is empty
+    }
+
+    private static void testCourseraCase1() {
+        System.out.println("\ntestCase1");
+        Deque<Integer> deque = new Deque<>();
+        compare("deque.isEmpty()", deque.isEmpty(), true);
+        deque.addLast(2);
+        compare("deque.removeFirst()", deque.removeFirst(), 2);
+        compare("deque.isEmpty()", deque.isEmpty(), true);
+        deque.addLast(5);
+        compare("deque.removeFirst()", deque.removeFirst(), 5);
+    }
+
+    private static void testCourseraCase2() {
+        System.out.println("\ntestCase2");
+        Deque<Integer> deque = new Deque<>();
+        deque.addLast(1);
+        compare("deque.removeFirst()", deque.removeFirst(), 1);
+        compare("deque.isEmpty()", deque.isEmpty(), true);
+        deque.addLast(4);
+        compare("deque.removeFirst()", deque.removeFirst(), 4);
+    }
+
+    private static void testCourseraCase3() {
+        System.out.println("\ntestCase3");
+        Deque<Integer> deque = new Deque<>();
+        deque.addLast(1);
+        compare("deque.removeFirst()", deque.removeFirst(), 1);
+        deque.addLast(3);
+        compare("deque.removeFirst()", deque.removeFirst(), 3);
     }
 
     private static void compare(String command, Object result, Object expected) {

@@ -6,6 +6,8 @@
 
 import edu.princeton.cs.algs4.StdIn;
 
+import java.util.Iterator;
+
 public class Permutation {
     public static void main(String[] args) {
         int k;
@@ -24,8 +26,10 @@ public class Permutation {
             rq.enqueue(word);
         }
 
+        Iterator<String> it = rq.iterator();
+
         for (int i = 0; i < k; i++) {
-            System.out.println(rq.iterator().next());
+            System.out.println(it.next());
         }
     }
 }

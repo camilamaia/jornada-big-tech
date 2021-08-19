@@ -2,6 +2,7 @@
  *  Name: Camila Maia
  *  Date: Aug 17th 2021
  *  Description: https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php
+ *  Reference: https://github.com/ufarobot/Deques-and-Randomized-Queues/blob/master/src/RandomizedQueue.java
  **************************************************************************** */
 
 import edu.princeton.cs.algs4.StdRandom;
@@ -13,41 +14,16 @@ import java.util.NoSuchElementException;
 public class RandomizedQueue<Item> implements Iterable<Item> {
     private int size = 0;
     private Item[] items;
-    private LinkedStackOfIntegers availableIndexes;
-
-    private class LinkedStackOfIntegers {
-        private Node first = null;
-
-        private class Node {
-            int item;
-            Node next;
-        }
-
-        public boolean isEmpty() {
-            return first == null;
-        }
-
-        public void push(int item) {
-            Node oldfirst = first;
-            first = new Node();
-            first.item = item;
-            first.next = oldfirst;
-        }
-
-        public int pop() {
-            int item = first.item;
-            first = first.next;
-            return item;
-        }
-    }
 
     private class RandomizedQueueIterator implements Iterator<Item> {
-        private boolean[] selectedIndexes;
-        private int totalSelected;
+        private int[] randomIndexes = new int[size];
+        private int totalSelected = 0;
 
         public RandomizedQueueIterator() {
-            selectedIndexes = new boolean[items.length];
-            totalSelected = 0;
+            for (int i = 0; i < size; i++) {
+                randomIndexes[i] = i;
+            }
+            StdRandom.shuffle(randomIndexes);
         }
 
         public boolean hasNext() {
@@ -58,20 +34,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             if (!hasNext()) {
                 throw new NoSuchElementException("There are no more items to return");
             }
-
-            int randomIndex = -1;
-
-            while (randomIndex == -1 || selectedIndexes[randomIndex]) {
-                randomIndex = StdRandom.uniform(0, items.length);
-
-                if (items[randomIndex] == null) {
-                    selectedIndexes[randomIndex] = true;
-                }
-            }
-
-            selectedIndexes[randomIndex] = true;
-            totalSelected++;
-            return items[randomIndex];
+            int selectedIndex = randomIndexes[totalSelected++];
+            return items[selectedIndex];
         }
 
         public void remove() {
@@ -83,9 +47,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      * Constructs an empty randomized queue
      */
     public RandomizedQueue() {
-        items = (Item[]) new Object[1];
-        availableIndexes = new LinkedStackOfIntegers();
-        availableIndexes.push(0);
+        items = (Item[]) new Object[2];
     }
 
     /**
@@ -106,11 +68,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      * @param item to be added
      */
     public void enqueue(Item item) {
-        int index = availableIndexes.pop();
-        if (index == items.length) doubleItemsLength();
-        items[index] = item;
-        size++;
-        if (availableIndexes.isEmpty()) availableIndexes.push(size);
+        if (item == null) throw new IllegalArgumentException("item must not be null");
+        if (size == items.length) resize(2 * items.length);
+        if (size == 0) {
+            items[size++] = item;
+            return;
+        }
+        items[size++] = item;
     }
 
     /**
@@ -120,19 +84,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      */
     public Item dequeue() {
         if (isEmpty()) throw new NoSuchElementException("RandomizedQueue is empty");
+        if (size > 0 && size == items.length / 4) resize(items.length / 2);
 
-        int selectedIndex = StdRandom.uniform(0, items.length);
-        while (items[selectedIndex] == null)
-            selectedIndex = StdRandom.uniform(0, items.length);
-
-        Item removedItem = items[selectedIndex];
-        items[selectedIndex] = null;
-        size--;
-        availableIndexes.push(selectedIndex);
-
-        if (size > 0 && size == items.length / 4) halveItemsLength();
-
-        return removedItem;
+        int selectedIndex = StdRandom.uniform(size);
+        Item item = items[selectedIndex];
+        items[selectedIndex] = items[--size];
+        items[size] = null;
+        return item;
     }
 
     /**
@@ -142,11 +100,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      */
     public Item sample() {
         if (isEmpty()) throw new NoSuchElementException("RandomizedQueue is empty");
-        int selectedIndex = StdRandom.uniform(0, items.length);
-        while (items[selectedIndex] == null)
-            selectedIndex = StdRandom.uniform(0, items.length);
-
-        return items[selectedIndex];
+        return items[StdRandom.uniform(size)];
     }
 
     /**
@@ -162,46 +116,14 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      * @param args
      */
     public static void main(String[] args) {
-        RandomizedQueue<String> rq = new RandomizedQueue<String>();
-        rq.enqueue("test");
-        rq.dequeue();
-        rq.enqueue("hello");
-        rq.enqueue("world");
-        System.out.println(rq.isEmpty());
-        System.out.println(rq.sample());
-        System.out.println(rq.size());
-
-        for (String word : rq) {
-            System.out.print(word);
-        }
         runTests();
     }
 
-    private void doubleItemsLength() {
-        int newCapacity = 2 * items.length;
+    private void resize(int newCapacity) {
         Item[] copy = (Item[]) new Object[newCapacity];
-        for (int i = 0; i < items.length; i++)
+        for (int i = 0; i < size; i++)
             copy[i] = items[i];
         items = copy;
-    }
-
-    private void halveItemsLength() {
-        int newCapacity = items.length / 2;
-        int next = 0;
-        Item[] copy = (Item[]) new Object[newCapacity];
-        for (int i = 0; i < items.length; i++) {
-            if (items[i] != null) {
-                copy[next] = items[i];
-                next++;
-            }
-        }
-        items = copy;
-
-        availableIndexes = new LinkedStackOfIntegers();
-
-        for (int j = items.length - 1; j >= size; j--) {
-            availableIndexes.push(j);
-        }
     }
 
     private static void runTests() {
@@ -250,7 +172,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         rq.enqueue("A");
         // System.out.println("Items: " + Arrays.toString(rq.items));
         compare("rq.size()", rq.size(), 1);
-        compare("rq.availableIndexes.pop()", rq.availableIndexes.pop(), 1);
 
         System.out.println("when there is more element already there");
         RandomizedQueue<String> rq2 = new RandomizedQueue<String>();
@@ -264,7 +185,16 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         rq2.enqueue("d");
         // System.out.println("Items: " + Arrays.toString(rq2.items));
         compare("rq2.size()", rq2.size(), 4);
-        compare("rq2.availableIndexes.pop()", rq2.availableIndexes.pop(), 4);
+
+        System.out.println("when item is null");
+        RandomizedQueue<String> rq3 = new RandomizedQueue<String>();
+        try {
+            rq.enqueue(null);
+            System.out.println(
+                    "ERROR!!! rq.enqueue() with item null did not raise IllegalArgumentException");
+        }
+        catch (IllegalArgumentException ignored) {
+        }
     }
 
     private static void testDequeue() {
@@ -368,7 +298,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         System.out.println("\ntestIterator");
 
         RandomizedQueue<String> rq = new RandomizedQueue<String>();
-        Iterator it = rq.iterator();
+        Iterator<String> it = rq.iterator();
         System.out.println("when it is empty");
         compare("it.hasNext()", it.hasNext(), false);
         try {
