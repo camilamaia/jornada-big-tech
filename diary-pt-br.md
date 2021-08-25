@@ -233,6 +233,25 @@
 
 - Corrigi o quê precisava para conseguir nota 100/100 no exercício [Deques and Randomized Queues Assignment][deques-and-randomized-queues-assignment]
 
+## Dia 37 (20/8)
+
+- Nada
+
+## Dia 38 (23/8)
+
+- Fiz o exercício [Longest Substring Without Repeating Characters][leetcode-longest-substring-without-repeating-characters]
+
+## Dia 39 (24/8)
+
+- Reação da 2a dose da vacina 🤕
+
+## Dia 40 (25/8)
+
+- ✅ Leetcode [Container With Most Water][leetcode-container-with-most-water]
+- ✅ Leetcode [Two Sum][leetcode-two-sum]
+- ✅ Leetcode [Two Sum II][leetcode-two-sum-ii]
+- ✅ Leetcode [Three Sum][leetcode-three-sum]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
@@ -242,9 +261,14 @@
 [educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
+[leetcode-container-with-most-water]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3048/
 [leetcode-fruit-into-baskets]: https://leetcode.com/explore/interview/card/google/67/sql-2/3046/
 [leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
+[leetcode-longest-substring-without-repeating-characters]: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 [leetcode-odd-even-jump]: https://leetcode.com/problems/odd-even-jump/
+[leetcode-three-sum]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3049/
+[leetcode-two-sum-ii]: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+[leetcode-two-sum]: https://leetcode.com/problems/two-sum/
 [leetcode-unique-email-addresses]: https://leetcode.com/problems/unique-email-addresses/
 [leetcode]: https://leetcode.com/
 [percolation-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php

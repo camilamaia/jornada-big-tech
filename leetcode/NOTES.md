@@ -55,3 +55,7 @@ https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-
 
 - dynamic programming
 - sliding window algorithm
+
+## Map
+
+https://www.w3schools.com/java/java_hashmap.asp
