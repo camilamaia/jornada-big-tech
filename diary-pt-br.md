@@ -252,6 +252,10 @@
 - ✅ Leetcode [Two Sum II][leetcode-two-sum-ii]
 - ✅ Leetcode [Three Sum][leetcode-three-sum]
 
+## Dia 41 (26/8)
+
+- ✅ Leetcode [Next Permutation][leetcode-next-permutation]
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
@@ -265,6 +269,7 @@
 [leetcode-fruit-into-baskets]: https://leetcode.com/explore/interview/card/google/67/sql-2/3046/
 [leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
 [leetcode-longest-substring-without-repeating-characters]: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+[leetcode-next-permutation]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3050/
 [leetcode-odd-even-jump]: https://leetcode.com/problems/odd-even-jump/
 [leetcode-three-sum]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3049/
 [leetcode-two-sum-ii]: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
