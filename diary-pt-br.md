@@ -256,6 +256,25 @@
 
 - ✅ Leetcode [Next Permutation][leetcode-next-permutation]
 
+## Dia 42 (27/8)
+
+- Started Leetcode [Multiply Strings][leet-code-multiply-strings]
+
+## Dia 43 (30/8)
+
+- ✅ Baixei os slides: https://www.coursera.org/learn/algorithms-part1/supplement/erHuw/lecture-slides
+- ✅ Vídeo sorting introduction: https://www.coursera.org/learn/algorithms-part1/lecture/JHpgy/sorting-introduction
+- ✅ Vídeo Selection Sort: https://www.coursera.org/learn/algorithms-part1/lecture/VE0sv/selection-sort
+
+## Dia 44 (31/8)
+
+- ✅ Vídeo Insertion Sort: https://www.coursera.org/learn/algorithms-part1/lecture/1hYlN/insertion-sort
+
+## Dia 45 (1/9)
+
+- ✅ Vídeo Shellsort: https://www.coursera.org/learn/algorithms-part1/lecture/zPYhF/shellsort
+- ✅ Vídeo Shuffling: https://www.coursera.org/learn/algorithms-part1/lecture/12vcF/shuffling
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php
@@ -265,6 +284,7 @@
 [educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
+[leet-code-multiply-strings]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3051/
 [leetcode-container-with-most-water]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3048/
 [leetcode-fruit-into-baskets]: https://leetcode.com/explore/interview/card/google/67/sql-2/3046/
 [leetcode-license-key-formatting]: https://leetcode.com/explore/interview/card/google/67/sql-2/472/
