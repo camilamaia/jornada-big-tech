@@ -461,7 +461,7 @@ Proposition: For partially-sorted arrays, insertion sort runs in linear time.
 - Pf. Number of exchanges equals the number of inversions.
 - number of compares <= exchanges + (N – 1)
 
-## Implementation
+### Implementation
 
 <p>
   <img
@@ -497,7 +497,7 @@ Which increment sequence to use?
   - 1, 4, 13, 40, 121, 364, ...
   - OK. Easy to compute.
 
-## Implementation
+### Implementation
 
 <p>
   <img
@@ -888,3 +888,309 @@ Best practices for shuffling (if your business depends on it).
 - Continuously monitor statistic properties:
   hardware random-number generators are fragile and fail silently.
 - Use an unbiased shuffling algorithm.
+
+## Convex hull
+
+Definition: The convex hull of a set of N points is the smallest perimeter fence enclosing the points.
+
+<p>
+  <img
+    src="images/image16.png"
+    width="500"
+    alt="Convex hull"
+  >
+</p>
+
+### Applications
+
+Motion planning
+
+- Robot motion planning. Find shortest path in the plane from s to t that avoids a polygonal obstacle.
+
+- Fact. Shortest path is either straight line from s to t or it is one of two polygonal chains of convex hull.
+
+<p>
+  <img
+    src="images/image17.png"
+    width="500"
+    alt="Convex hull: shortest path"
+  >
+</p>
+
+Farthest pair
+
+- Given N points in the plane, find a pair of points with the largest Euclidean distance between them.
+- Fact. Farthest pair of points are extreme points on convex hull.
+
+<p>
+  <img
+    src="images/image18.png"
+    width="500"
+    alt="Convex hull: Farthest pair"
+  >
+</p>
+
+### Geometric properties
+
+- Fact. Can traverse the convex hull by making only **counterclockwise** turns.
+- Fact. The vertices of convex hull appear in increasing order of polar angle with respect to point p with lowest y-coordinate.
+
+<p>
+  <img
+    src="images/image19.png"
+    width="500"
+    alt="Convex hull: Farthest pair"
+  >
+</p>
+
+### Graham scan
+
+Algorithm to find the Convex hull
+
+Steps:
+
+- Choose point p with smallest y-coordinate.
+- Sort points by polar angle with p.
+- Consider points in order; discard unless it create a ccw turn.
+
+Implementation challenges
+
+- Q. How to find point p with smallest y-coordinate?
+- A. Define a total order, comparing by y-coordinate. [next lecture]
+
+- Q. How to sort points by polar angle with respect to p ?
+- A. Define a total order for each point p. [next lecture]
+
+- Q. How to determine whether p1 → p2 → p3 is a counterclockwise turn?
+- A. Computational geometry. [next two slides]
+
+- Q. How to sort efficiently?
+- A. Mergesort sorts in N log N time. [next lecture]
+
+- Q. How to handle degeneracies (three or more points on a line)?
+- A. Requires some care, but not hard. [see booksite]
+
+### Implementing
+
+CCW. Given three points a, b, and c, is a → b → c a counterclockwise turn?
+
+- If signed area > 0, then a → b → c is counterclockwise.
+- If signed area < 0, then a → b → c is clockwise.
+- If signed area = 0, then a → b → c are collinear.
+- Let's skip the mathematical proof
+
+<p>
+  <img
+    src="images/image20.png"
+    width="500"
+    alt="Convex hull: Implementing ccw"
+  >
+</p>
+
+Lesson: Geometric primitives are tricky to implement.
+
+- Dealing with degenerate cases.
+- Coping with floating-point precision.
+
+```java
+public class Point2D {
+  private final double x;
+  private final double y;
+  public Point2D(double x, double y) {
+    this.x = x;
+    this.y = y;
+  }
+  ...
+
+  public static int ccw(Point2D a, Point2D b, Point2D c) {
+    double area2 = (b.x-a.x)*(c.y-a.y) - (b.y-a.y)*(c.x-a.x); // danger of floating-point roundoff error
+    if      (area2 < 0) return -1;  // clockwise
+    else if (area2 > 0) return +1;  // counter-clockwise
+    else                return  0;  // collinear
+  }
+}
+```
+
+<p>
+  <img
+    src="images/image21.png"
+    width="500"
+    alt="Convex hull: Question"
+  >
+</p>
+
+## 2.2 MERGESORT
+
+Basic plan:
+
+- Divide array into two halves.
+- Recursively sort each half.
+- Merge two halves.
+
+### Implementation
+
+Merge
+
+- Given two sorted subarrays a[lo] to a[mid] and a[mid+1] to a[hi], replace with sorted subarray
+  a[lo] to a[hi].
+
+<p>
+  <img
+    src="images/image22.png"
+    width="500"
+    alt="Mergesort: merge"
+  >
+</p>
+
+```java
+private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+  assert isSorted(a, lo, mid);    // precondition: a[lo..mid]   sorted
+  assert isSorted(a, mid+1, hi);  // precondition: a[mid+1..hi] sorted
+
+  // copy
+  for (int k = lo; k <= hi; k++)
+    aux[k] = a[k];
+
+  // merge
+  int i = lo, j = mid+1;
+  for (int k = lo; k <= hi; k++) {
+    if      (i > mid)              a[k] = aux[j++];
+    else if (j > hi)               a[k] = aux[i++];
+    else if (less(aux[j], aux[i])) a[k] = aux[j++];
+    else                           a[k] = aux[i++];
+  }
+
+  assert isSorted(a, lo, hi);     // postcondition: a[lo..hi] sorted
+}
+```
+
+Java assert statement
+
+- Throws exception unless boolean condition is true.
+- Can enable or disable at runtime. ⇒ No cost in production code.
+
+```shell
+java -ea MyProgram   // enable assertions
+java -da MyProgram   // disable assertions (default)
+```
+
+```java
+pubic class Merge {
+  private static void merge(...) {
+     /* as before */
+  }
+
+  private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+      if (hi <= lo) return;
+      int mid = lo + (hi - lo) / 2;
+      sort(a, aux, lo, mid);
+      sort(a, aux, mid+1, hi);
+      merge(a, aux, lo, mid, hi);
+  }
+
+  public static void sort(Comparable[] a) {
+      aux = new Comparable[a.length];
+      sort(a, aux, 0, a.length - 1);
+   }
+}
+```
+
+<p>
+  <img
+    src="images/image23.png"
+    width="500"
+    alt="Mergesort: example"
+  >
+</p>
+
+### Mathematical analysis
+
+Proposition: Mergesort uses at most N lg N compares and 6 N lg N array accesses to sort any array
+of size N.
+
+[assuming N is a power of 2]
+
+<p>
+  <img
+    src="images/image24.png"
+    width="500"
+  >
+</p>
+
+Proposition. Mergesort uses extra space proportional to N.
+
+- Pf. The array aux[] needs to be of size N for the last merge.
+
+<p>
+  <img
+    src="images/image25.png"
+    width="500"
+  >
+</p>
+
+Definitions: A sorting algorithm is `in-place` if it uses ≤ c log N extra memory. Ex. Insertion sort, selection sort, shellsort.
+
+### Practical Improvements
+
+1. Use insertion sort for small subarrays.
+
+- Mergesort has too much overhead for tiny subarrays.
+- Cutoff to insertion sort for ≈ 7 items.
+
+```java
+ate static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+  if (hi <= lo + CUTOFF - 1) {
+    Insertion.sort(a, lo, hi);
+    return;
+  }
+  int mid = lo + (hi - lo) / 2;
+  sort (a, aux, lo, mid);
+  sort (a, aux, mid+1, hi);
+  merge(a, aux, lo, mid, hi);
+}
+```
+
+2. Stop if already sorted.
+
+- Is biggest item in first half ≤ smallest item in second half?
+- Helps for partially-ordered arrays.
+
+```java
+private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+   if (hi <= lo) return;
+   int mid = lo + (hi - lo) / 2;
+   sort (a, aux, lo, mid);
+   sort (a, aux, mid+1, hi);
+   if (!less(a[mid+1], a[mid])) return; // HERE!!
+   merge(a, aux, lo, mid, hi);
+}
+```
+
+3. Eliminate the copy to the auxiliary array.
+
+- Save time (but not space) by switching the role of the input and auxiliary array in each
+  recursive call.
+
+```java
+private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+  int i = lo, j = mid+1;
+  for (int k = lo; k <= hi; k++) {
+    if      (i > mid)          aux[k] = a[j++];
+    else if (j > hi)           aux[k] = a[i++];
+    else if (less(a[j], a[i])) aux[k] = a[j++];
+    else                       aux[k] = a[i++];
+  }
+}
+
+private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+   if (hi <= lo) return;
+   int mid = lo + (hi - lo) / 2;
+   sort (aux, a, lo, mid);
+   sort (aux, a,  mid+1, hi);
+   merge(a, aux, lo, mid, hi); // switch roles of aux[] and a[]
+}
+```
+
+Note: `sort(a)` initializes `aux[]` and sets `aux[i] = a[i]` for each `i`.
+
+<p> <img src="images/image26.png" width="500"> </p>
