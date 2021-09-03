@@ -282,6 +282,13 @@
 - ✅ Baixei os slides: https://www.coursera.org/learn/algorithms-part1/supplement/4E9fa/lecture-slides
 - ✅ Vídeo Mergesort: https://www.coursera.org/learn/algorithms-part1/lecture/ARWDq/mergesort
 
+## Dia 47 (3/9)
+
+- ✅ Vídeo Bottom-up Mergesort: https://www.coursera.org/learn/algorithms-part1/lecture/PWNEl/bottom-up-mergesort
+- ✅ Vídeo Sorting Complexity: https://www.coursera.org/learn/algorithms-part1/lecture/xAltF/sorting-complexity
+- ✅ Vídeo Comparators: https://www.coursera.org/learn/algorithms-part1/lecture/9FYhS/comparators
+- ✅ Vídeo Stability: https://www.coursera.org/learn/algorithms-part1/lecture/pvvLZ/stability
+
 [algorithms-book]: https://www.amazon.com/gp/product/032157351X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=algs4-coursera-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032157351X
 [back-to-back-swe-merge-sort]: https://www.youtube.com/watch?v=alJswNJ4P3U
 [coursera-errata]: https://algs4.cs.princeton.edu/errata/errata-videos.php

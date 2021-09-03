@@ -1,5 +1,60 @@
 # Notes - Algorithms, Part I
 
+- [Notes - Algorithms, Part I](#notes---algorithms--part-i)
+  - [1.5 UNION-FIND](#15-union-find)
+    - [Dynamic connectivity](#dynamic-connectivity)
+      - [Quick Find](#quick-find)
+      - [Quick Union [lazy approach]](#quick-union--lazy-approach-)
+      - [Quick-Union Improvements](#quick-union-improvements)
+    - [Percolation Assignment](#percolation-assignment)
+  - [1.4 ANALYSIS OF ALGORITHMS](#14-analysis-of-algorithms)
+    - [Cost of basic operations](#cost-of-basic-operations)
+    - [Common order-of-growth classifications](#common-order-of-growth-classifications)
+    - [Binary search: Java implementation](#binary-search--java-implementation)
+    - [Commonly-used notations](#commonly-used-notations)
+    - [Typical memory usage for primitive types and arrays](#typical-memory-usage-for-primitive-types-and-arrays)
+    - [Typical memory usage for objects in Java](#typical-memory-usage-for-objects-in-java)
+  - [2.1 ELEMENTARY SORTS](#21-elementary-sorts)
+    - [Sort](#sort)
+      - [Comparable API](#comparable-api)
+      - [Testing](#testing)
+    - [Selection sort](#selection-sort)
+      - [Implementation](#implementation)
+    - [Insertion sort](#insertion-sort)
+      - [Implementation](#implementation-1)
+    - [Shellsort](#shellsort)
+      - [Implementation](#implementation-2)
+      - [Example](#example)
+    - [Shuffling](#shuffling)
+      - [Shuffle sort](#shuffle-sort)
+      - [Knuth shuffle](#knuth-shuffle)
+    - [Convex hull](#convex-hull)
+      - [Applications](#applications)
+      - [Geometric properties](#geometric-properties)
+      - [Graham scan](#graham-scan)
+      - [Implementing](#implementing)
+      - [Question](#question)
+  - [2.2 MERGESORT](#22-mergesort)
+    - [Mergesort](#mergesort)
+      - [Implementation](#implementation-3)
+      - [Mathematical analysis](#mathematical-analysis)
+      - [Practical Improvements](#practical-improvements)
+      - [Question](#question-1)
+    - [Bottom-up mergesort](#bottom-up-mergesort)
+      - [Implementation](#implementation-4)
+      - [Question](#question-2)
+    - [Sorting Complexity](#sorting-complexity)
+      - [Question](#question-3)
+    - [Comparators](#comparators)
+      - [Polar order](#polar-order)
+      - [Question](#question-4)
+    - [Stability](#stability)
+      - [Stability: insertion sort](#stability--insertion-sort)
+      - [Stability: selection sort](#stability--selection-sort)
+      - [Stability: shellsort](#stability--shellsort)
+      - [Stability: mergesort](#stability--mergesort)
+      - [Question](#question-5)
+
 ## 1.5 UNION-FIND
 
 Steps to developing a usable algorithm.
@@ -162,8 +217,9 @@ possible to solve problems that could not otherwise be addressed.
 \* M union-find operations on a set of N objects
 
 Ex. [10^9 unions and finds with 10^9 objects]
-・WQUPC reduces time from 30 years to 6 seconds.
-・Supercomputer won't help much; good algorithm enables solution.
+
+- WQUPC reduces time from 30 years to 6 seconds.
+- Supercomputer won't help much; good algorithm enables solution.
 
 ### Percolation Assignment
 
@@ -287,7 +343,7 @@ Deep memory usage: If array entry or instance variable is a reference, add memor
 
 ## 2.1 ELEMENTARY SORTS
 
-## Sort
+### Sort
 
 Goal: Sort any type of data.
 
@@ -324,7 +380,7 @@ Surprising but true: The <= operator for double is not a total order. (!)
 
 - violates totality: (Double.NaN <= Double.NaN) is false
 
-### Comparable API
+#### Comparable API
 
 Implement compareTo() so that v.compareTo(w)
 
@@ -360,7 +416,7 @@ private static void exch(Comparable[] a, int i, int j) {
 }
 ```
 
-### Testing
+#### Testing
 
 Test if an array is sorted.
 
@@ -373,7 +429,7 @@ private static boolean isSorted(Comparable[] a)
 }
 ```
 
-## Selection sort
+### Selection sort
 
 - Algorithm:
 
@@ -397,7 +453,7 @@ private static boolean isSorted(Comparable[] a)
   >
 </p>
 
-## Implementation
+#### Implementation
 
 <p>
   <img
@@ -407,7 +463,7 @@ private static boolean isSorted(Comparable[] a)
   >
 </p>
 
-## Insertion sort
+### Insertion sort
 
 - Algorithm:
 
@@ -461,7 +517,7 @@ Proposition: For partially-sorted arrays, insertion sort runs in linear time.
 - Pf. Number of exchanges equals the number of inversions.
 - number of compares <= exchanges + (N – 1)
 
-### Implementation
+#### Implementation
 
 <p>
   <img
@@ -473,7 +529,7 @@ Proposition: For partially-sorted arrays, insertion sort runs in linear time.
 
 More info at: https://www.youtube.com/watch?v=ufIET8dMnus
 
-## Shellsort
+### Shellsort
 
 - Improvement of Insertion Sort
 - Idea: Move entries more than one position at a time by h-sorting the array.
@@ -497,7 +553,7 @@ Which increment sequence to use?
   - 1, 4, 13, 40, 121, 364, ...
   - OK. Easy to compute.
 
-### Implementation
+#### Implementation
 
 <p>
   <img
@@ -507,7 +563,7 @@ Which increment sequence to use?
   >
 </p>
 
-### Example
+#### Example
 
 input = `S H E L L S O R T E X A M P L E`
 
@@ -829,13 +885,13 @@ h => 3x + 1
 
 Final result: `A E E E H L L L M O P R S S T X`
 
-## Shuffling
+### Shuffling
 
 Goal: Rearrange array so that result is a uniformly random permutation.
 
 How to shuffle an array?
 
-### Shuffle sort
+#### Shuffle sort
 
 - Generate a random real number for each array entry.
   (useful for shuffling columns in a spreadsheet)
@@ -854,7 +910,7 @@ of the input array, provided no duplicate values.
 
 Drawback: you need to pay the cost of sort
 
-### Knuth shuffle
+#### Knuth shuffle
 
 Algorithm:
 
@@ -889,7 +945,7 @@ Best practices for shuffling (if your business depends on it).
   hardware random-number generators are fragile and fail silently.
 - Use an unbiased shuffling algorithm.
 
-## Convex hull
+### Convex hull
 
 Definition: The convex hull of a set of N points is the smallest perimeter fence enclosing the points.
 
@@ -901,7 +957,7 @@ Definition: The convex hull of a set of N points is the smallest perimeter fence
   >
 </p>
 
-### Applications
+#### Applications
 
 Motion planning
 
@@ -930,7 +986,7 @@ Farthest pair
   >
 </p>
 
-### Geometric properties
+#### Geometric properties
 
 - Fact. Can traverse the convex hull by making only **counterclockwise** turns.
 - Fact. The vertices of convex hull appear in increasing order of polar angle with respect to point p with lowest y-coordinate.
@@ -943,7 +999,7 @@ Farthest pair
   >
 </p>
 
-### Graham scan
+#### Graham scan
 
 Algorithm to find the Convex hull
 
@@ -970,7 +1026,7 @@ Implementation challenges
 - Q. How to handle degeneracies (three or more points on a line)?
 - A. Requires some care, but not hard. [see booksite]
 
-### Implementing
+#### Implementing
 
 CCW. Given three points a, b, and c, is a → b → c a counterclockwise turn?
 
@@ -1011,6 +1067,8 @@ public class Point2D {
 }
 ```
 
+#### Question
+
 <p>
   <img
     src="images/image21.png"
@@ -1021,13 +1079,15 @@ public class Point2D {
 
 ## 2.2 MERGESORT
 
+### Mergesort
+
 Basic plan:
 
 - Divide array into two halves.
 - Recursively sort each half.
 - Merge two halves.
 
-### Implementation
+#### Implementation
 
 Merge
 
@@ -1103,7 +1163,7 @@ pubic class Merge {
   >
 </p>
 
-### Mathematical analysis
+#### Mathematical analysis
 
 Proposition: Mergesort uses at most N lg N compares and 6 N lg N array accesses to sort any array
 of size N.
@@ -1130,7 +1190,7 @@ Proposition. Mergesort uses extra space proportional to N.
 
 Definitions: A sorting algorithm is `in-place` if it uses ≤ c log N extra memory. Ex. Insertion sort, selection sort, shellsort.
 
-### Practical Improvements
+#### Practical Improvements
 
 1. Use insertion sort for small subarrays.
 
@@ -1193,4 +1253,317 @@ private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
 Note: `sort(a)` initializes `aux[]` and sets `aux[i] = a[i]` for each `i`.
 
+#### Question
+
 <p> <img src="images/image26.png" width="500"> </p>
+
+### Bottom-up mergesort
+
+Basic plan:
+
+- Pass through array, merging subarrays of size 1.
+- Repeat for subarrays of size 2, 4, 8, 16, ....
+
+<p> <img src="images/image27.png" width="500"> </p>
+
+#### Implementation
+
+```java
+public class MergeBU {
+  private static void merge(...) {  /* as before */  }
+  public static void sort(Comparable[] a) {
+    int N = a.length;
+    Comparable[] aux = new Comparable[N];
+    for (int sz = 1; sz < N; sz = sz+sz)
+      for (int lo = 0; lo < N-sz; lo += sz+sz)
+        merge(a, aux, lo, lo+sz-1, Math.min(lo+sz+sz-1, N-1));
+  }
+}
+```
+
+Bottom line: Simple and non-recursive version of mergesort.
+
+- Still N Log N
+- But about 10% slower than recursive, top-down mergesort on typical systems
+- Downside: It uses extra space proportional to N
+
+#### Question
+
+<p> <img src="images/image28.png" width="500"> </p>
+
+### Sorting Complexity
+
+Upper Bound
+
+- By an upper bound of Un for some problem and some length n, we mean that `there exists` an
+  algorithm A that `for every` input x of length n costs `at most` Un.
+- The maximum guaranteed
+
+Lower Bound
+
+- By a lower bound of Ln for some problem and some length n, we mean that `for any` algorithm A
+  `there exists` an input x of length n on which A costs `at least` Ln steps.
+- The minimum guaranteed
+
+The `Big-O` notation defines the `upper bound` of an algorithm.
+
+- The maximum guaranteed - even in the worst-case scenario.Worst case.
+
+Optimal algorithm
+
+- Upper bound same as its lower bound
+- (U(n)=L(n))
+
+Computational complexity: Framework to study efficiency of algorithms for solving a particular
+problem X.
+
+- Model of computation: Allowable operations.
+- Cost model: Operation count(s).
+- Upper bound: Cost guarantee provided by some algorithm for X.
+- Lower bound: Proven limit on cost guarantee of all algorithms for X.
+- Optimal algorithm: Algorithm with best possible cost guarantee for X.
+
+Example: sorting
+
+- Model of computation: decision tree.
+- Cost model: # compares.
+- Upper bound: ~ N lg N from mergesort.
+- Lower bound: ?
+- Optimal algorithm: ?
+
+<p> <img src="images/image29.png" width="500"> </p>
+
+Proposition: Any compare-based sorting algorithm must use at least lg ( N ! ) ~ N lg N compares
+in the worst-case.
+
+- Proof:
+  - Assume array consists of N distinct values a1 through aN.
+  - Worst case dictated by height `h` of decision tree.
+  - Binary tree of height `h` has at most `2^h` leaves.
+  - N! different orderings ⇒ at least N! leaves.
+
+```
+2^h ≥ #leaves ≥ N!
+⇒ h ≥ lg ( N ! ) ~ N lg N
+⇒ h ≥ N lg N (Stirling's formula: lg ( N ! ) ~ N lg N)
+```
+
+Example: sorting.
+
+- Model of computation: decision tree.
+- Cost model: # compares.
+- Upper bound: ~ N lg N from mergesort.
+- Lower bound: ~ N lg N.
+- Optimal algorithm = mergesort.
+
+First goal of algorithm design: optimal algorithms.
+
+Complexity results in context
+
+- Compares? Mergesort is optimal with respect to number compares.
+- Space? Mergesort is not optimal with respect to space usage.
+- Lower bound may not hold if the algorithm has information about:
+  - The initial order of the input.
+  - The distribution of key values.
+  - The representation of the keys.
+
+Partially-ordered arrays: Depending on the initial order of the input,
+we may not need N lg N compares. (insertion sort requires only N-1 compares if input array is
+sorted)
+
+Duplicate keys: Depending on the input distribution of duplicates, we may not need N lg N compares.
+(stay tuned for 3-way quicksort)
+
+Digital properties of keys: We can use digit/character compares instead of
+key compares for numbers and strings. (stay tuned for radix sorts)
+
+#### Question
+
+<p> <img src="images/image30.png" width="500"> </p>
+
+### Comparators
+
+Comparable interface: sort using a type's `natural order`.
+
+Comparator interface: sort using an `alternate order`.
+
+<p> <img src="images/image31.png" width="500"> </p>
+
+Required property: Must be a total order.
+
+Example: Sort strings by:
+
+- Natural order: `Now is the time`
+- Case insensitive: `is Now the time`
+- Spanish: `café cafetero cuarto churro nube ñoño`
+- British phone book: `McKinley Mackintosh`
+- ...
+
+To use with Java system sort:
+
+- Create Comparator object.
+- Pass as second argument to Arrays.sort().
+
+<p> <img src="images/image32.png" width="500"> </p>
+
+Bottom line: Decouples the definition of the data type from the definition of what it means to
+compare two objects of that type.
+
+To support comparators in our sort implementations:
+
+- Use Object instead of Comparable.
+- Pass Comparator to sort() and less() and use it in less().
+
+<p> <img src="images/image33.png" width="500"> </p>
+
+To implement a comparator:
+
+- Define a (nested) class that implements the Comparator interface.
+- Implement the compare() method.
+
+<p> <img src="images/image34.png" width="500"> </p>
+
+#### Polar order
+
+Polar order: Given a point p, order points by polar angle they make with p.
+
+- Application. Graham scan algorithm for convex hull. [see previous lecture]
+
+<p> <img src="images/image35.png" width="500"> </p>
+
+A ccw-based solution:
+
+- If q1 is above p and q2 is below p, then q1 makes smaller polar angle.
+- If q1 is below p and q2 is above p, then q1 makes larger polar angle.
+- Otherwise, ccw(p, q1, q2) identifies which of q1 or q2 makes larger angle.
+
+<p> <img src="images/image36.png" width="500"> </p>
+
+#### Question
+
+<p> <img src="images/image37.png" width="500"> </p>
+
+### Stability
+
+A typical application: First, sort by name; `then` sort by section.
+
+Definition: A `stable sort` preserves the relative order of items with equal keys.
+
+Which sorts are stable?
+
+- Insertion sort and mergesort (but not selection sort or shellsort).
+
+<p> <img src="images/image38.png" width="500"> </p>
+
+Note: Need to carefully check code ("less than" vs. "less than or equal to").
+
+#### Stability: insertion sort
+
+Proposition: Insertion sort is stable.
+
+- Proof: Equal items never move past each other.
+
+```java
+public class Insertion {
+  public static void sort(Comparable[] a) {
+    int N = a.length;
+    for (int i = 0; i < N; i++)
+  }
+}
+```
+
+<p> <img src="images/image39.png" width="500"> </p>
+
+#### Stability: selection sort
+
+Proposition: Selection sort is not stable.
+
+- Proof by counterexample. Long-distance exchange might move an item past some equal item.
+
+```java
+public  class Selection {
+  public static void sort(Comparable[] a) {
+    int N = a.length;
+    for (int i = 0; i < N; i++) {
+      int min = i;
+      for (int j = i+1; j < N; j++)
+        if (less(a[j], a[min]))
+            min = j;
+      exch(a, i, min);
+    }
+  }
+}
+```
+
+<p> <img src="images/image40.png" width="500"> </p>
+
+#### Stability: shellsort
+
+Proposition: Shellsort sort is not stable.
+
+- Pf by counterexample. Long-distance exchanges.
+
+```java
+pubic class Shell {
+  public static void sort(Comparable[] a) {
+    int N = a.length;
+    int h = 1;
+    while (h < N/3) h = 3*h + 1;
+    while (h >= 1) {
+      for (int i = h; i < N; i++) {
+        for (int j = i; j > h && less(a[j], a[j-h]); j -= h)
+            exch(a, j, j-h);
+      }
+      h = h/3; }
+  }
+}
+```
+
+<p> <img src="images/image41.png" width="500"> </p>
+
+#### Stability: mergesort
+
+Proposition: Mergesort is stable.
+
+- Proof: Suffices to verify that merge operation is stable.
+
+```java
+public class Merge {
+  private static Comparable[] aux;
+  private static void merge(Comparable[] a, int lo, int mid, int hi) {
+    /* as before */
+  }
+
+  private static void sort(Comparable[] a, int lo, int hi) {
+    if (hi <= lo) return;
+    int mid = lo + (hi - lo) / 2;
+    sort(a, lo, mid);
+    sort(a, mid+1, hi);
+    merge(a, lo, mid, hi);
+  }
+  public static void sort(Comparable[] a) {  /* as before */  }
+}
+```
+
+- Proof: Takes from left subarray if equal keys.
+
+```java
+private static void merge(...) {
+  for (int k = lo; k <= hi; k++)
+    aux[k] = a[k];
+
+  int i = lo, j = mid+1;
+  for (int k = lo; k <= hi; k++) {
+    if      (i > mid)              a[k] = aux[j++];
+    else if (j > hi)               a[k] = aux[i++];
+    else if (less(aux[j], aux[i])) a[k] = aux[j++];
+    else                           a[k] = aux[i++];
+  }
+}
+```
+
+<p> <img src="images/image42.png" width="500"> </p>
+
+#### Question
+
+<p> <img src="images/image43.png" width="500"> </p>
