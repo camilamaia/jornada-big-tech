@@ -26,7 +26,7 @@
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
 [coursera-part-2]: https://www.coursera.org/learn/algorithms-part2
 [ctci]: https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en
-[educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
+[educative-io-course]: https://www.designgurus.io/course/grokking-the-system-design-interview
 [gainlo]: http://www.gainlo.co/#!/
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [leetcode]: https://leetcode.com/

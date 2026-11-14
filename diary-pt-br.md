@@ -295,7 +295,7 @@
 [coursera-part-1]: https://www.coursera.org/learn/algorithms-part1
 [ctci]: https://books.google.co.uk/books/about/Cracking_the_Coding_Interview.html?id=anhAXwAACAAJ&hl=en
 [deques-and-randomized-queues-assignment]: https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php
-[educative-io-course]: https://www.educative.io/courses/grokking-the-system-design-interview
+[educative-io-course]: https://www.designgurus.io/course/grokking-the-system-design-interview
 [google-java-style-guide]: https://google.github.io/styleguide/javaguide.html
 [intellij]: https://www.jetbrains.com/pt-br/idea/
 [leet-code-multiply-strings]: https://leetcode.com/explore/interview/card/google/59/array-and-strings/3051/
